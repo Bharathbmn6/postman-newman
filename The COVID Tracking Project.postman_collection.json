@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "7c8b03d6-51cd-4ca6-9e98-777d4d0c0e57",
+		"name": "The COVID Tracking Project",
+		"description": "The COVID Tracking Project collects information from 50 US states, the District of Columbia, and 5 other US territories to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2. We attempt to include positive and negative results, pending tests, and total people tested for each state or district currently reporting that data.\n\n- [Website](https://covidtracking.com/)\n- [GitHub](https://github.com/COVID19Tracking)\n- [Twitter](https://twitter.com/covid19tracking)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "States Current",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/states",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States Daily",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/states/daily",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"states",
+						"daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "States Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/states/info",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"states",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US Current",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://covidtracking.com/api/us",
+					"protocol": "http",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"us"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "US Daily",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/us/daily",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"us",
+						"daily"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/counties",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"counties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracker URLs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/urls",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "State Website Screenshots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/screenshots",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"screenshots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "In the Press",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://covidtracking.com/api/press",
+					"protocol": "https",
+					"host": [
+						"covidtracking",
+						"com"
+					],
+					"path": [
+						"api",
+						"press"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
